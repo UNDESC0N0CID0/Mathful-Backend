@@ -4,7 +4,7 @@ import { google } from '@ai-sdk/google';
 import { generateText } from 'ai';
 import dotenv from 'dotenv';
 import cors from 'cors';
-const serverless = require('serverless-http');
+import serverless from 'serverless-http';
 
 dotenv.config();
 
