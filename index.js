@@ -4,7 +4,6 @@ import { google } from '@ai-sdk/google';
 import { generateText } from 'ai';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import serverless from 'serverless-http';
 
 dotenv.config();
 
@@ -70,8 +69,6 @@ app.get('/', (req, res) => {
 app.get('/hello', (req, res) => {
     res.send('Hello World');
 });
-// app.listen(3000, () => {
-//     console.log('Server is running on port 3000');
-// });
-
-module.exports.handler = serverless(app);
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
